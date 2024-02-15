@@ -7,6 +7,7 @@ WorldWise is a web application where users can add cities they want to visit or 
 - Add cities and countries you want to visit or explore.
 - Browse through a list of cities and countries added by other users.
 - Interact with a user-friendly interface built with React.
+- Access your current location.
 
 **Technologies Used:**
 
