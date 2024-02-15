@@ -1,12 +1,13 @@
 /* eslint-disable react/prop-types */
 import {
   createContext,
-  useContext,
   useEffect,
-  useReducer,
+  useContext,
   useCallback,
+  useReducer,
 } from 'react'
-import { v4 as uuidv4 } from 'uuid'
+
+const BASE_URL = 'http://localhost:8080'
 
 const CitiesContext = createContext()
 
@@ -56,45 +57,58 @@ function CitiesProvider({ children }) {
     async function fetchCities() {
       dispatch({ type: 'loading' })
       try {
-        const storedCities = JSON.parse(localStorage.getItem('cities')) || []
-        dispatch({ type: 'cities/loaded', payload: storedCities })
+        const res = await fetch(`${BASE_URL}/cities`)
+        const data = await res.json()
+        dispatch({ type: 'cities/loaded', payload: data })
       } catch {
-        dispatch({
-          type: 'rejected',
-          payload: 'Error fetching cities from storage',
-        })
+        dispatch({ type: 'rejected', payload: 'Error fetch cities' })
       }
     }
     fetchCities()
   }, [])
-
-  const updateStorage = (citiesData) => {
-    localStorage.setItem('cities', JSON.stringify(citiesData))
-  }
 
   const getCity = useCallback(
     async (id) => {
       if (id === currentCity[0]?.id) return
       dispatch({ type: 'loading' })
       try {
-        const city = cities.find((city) => city.id === id)
-        dispatch({ type: 'city/loaded', payload: city })
+        const res = await fetch(`${BASE_URL}/cities?id=${id}`)
+        const data = await res.json()
+        dispatch({ type: 'city/loaded', payload: data })
       } catch {
         dispatch({ type: 'rejected', payload: 'Error fetch city' })
       }
     },
-    [currentCity, cities]
+    [currentCity]
   )
 
-  const createCity = async (newCity) => {
-    const cityWithId = { ...newCity, id: uuidv4() }
-    dispatch({ type: 'cities/created', payload: cityWithId })
-    updateStorage([...cities, cityWithId])
+  async function createCity(newCity) {
+    dispatch({ type: 'loading' })
+    try {
+      const res = await fetch(`${BASE_URL}/cities`, {
+        method: 'POST',
+        body: JSON.stringify(newCity),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+      const data = await res.json()
+      dispatch({ type: 'cities/created', payload: data })
+    } catch {
+      dispatch({ type: 'rejected', payload: 'Error create city' })
+    }
   }
 
-  const deleteCity = async (id) => {
-    dispatch({ type: 'cities/deleted', payload: id })
-    updateStorage(cities.filter((city) => city.id !== id))
+  async function deleteCity(id) {
+    dispatch({ type: 'loading' })
+    try {
+      await fetch(`${BASE_URL}/cities/${id}`, {
+        method: 'DELETE',
+      })
+      dispatch({ type: 'cities/deleted', payload: id })
+    } catch {
+      dispatch({ type: 'rejected', payload: 'Error delete a city' })
+    }
   }
 
   return (
@@ -117,7 +131,7 @@ function CitiesProvider({ children }) {
 function useCities() {
   const context = useContext(CitiesContext)
   if (context === undefined)
-    throw new Error('useCities must be used within a CitiesProvider')
+    throw new Error('Context was used outside of the Provider')
   return context
 }
 

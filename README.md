@@ -1,6 +1,6 @@
 **WorldWise**
 
-WorldWise is a web application where users can add cities they want to visit or any other interesting locations. Users can also explore the list of cities and countries added by others.
+WorldWise is a web application where users can add cities they want to visit or any other interesting locations. Users can also explore the list of cities and countries added by others if there is a API but for now it's just Browser Local Storage
 
 **Features:**
 
@@ -21,6 +21,7 @@ WorldWise is a web application where users can add cities they want to visit or 
 - Lazy Loading
 - CSS Modules
 - Custom Hooks
+- Custom Context for API and Browser Local Storage
 
 **How to Contribute:**
 
