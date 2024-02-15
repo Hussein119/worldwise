@@ -1,0 +1,19 @@
+.countryItem {
+  display: flex;
+  align-items: center;
+  gap: 25rem;
+
+  font-size: 1.7rem;
+  font-weight: 600;
+
+  background-color: var(--color-dark--2);
+  border-radius: 7px;
+  padding: 2.5rem 1.5rem;
+  border-left: 5px solid var(--color-brand--1);
+  margin-bottom: 1rem;
+}
+
+.countryItem span {
+  font-size: 2rem;
+  line-height: 1;
+}

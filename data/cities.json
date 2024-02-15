@@ -1,0 +1,136 @@
+{
+  "cities": [
+    {
+      "id": "dd3d",
+      "cityName": "Jimai",
+      "country": "China",
+      "emoji": "cn",
+      "date": "2024-02-15T11:44:57.165Z",
+      "notes": "",
+      "position": {
+        "lat": 33.53747294294149,
+        "lng": 99.49218750000001
+      }
+    },
+    {
+      "id": "3edb",
+      "cityName": "Alia",
+      "country": "Spain",
+      "emoji": "es",
+      "date": "2024-02-15T11:45:32.426Z",
+      "notes": "",
+      "position": {
+        "lat": 39.41534763267692,
+        "lng": -5.075683593750001
+      }
+    },
+    {
+      "id": "3d6b",
+      "cityName": "Golmud",
+      "country": "China",
+      "emoji": "cn",
+      "date": "2024-02-15T11:58:16.527Z",
+      "notes": "",
+      "position": {
+        "lat": 35.89134805718945,
+        "lng": 95.44921875
+      }
+    },
+    {
+      "id": "9ffb",
+      "cityName": "Wood Buffalo",
+      "country": "Canada",
+      "emoji": "ca",
+      "date": "2024-02-15T11:58:22.930Z",
+      "notes": "",
+      "position": {
+        "lat": 59.56556711908311,
+        "lng": -111.4453125
+      }
+    },
+    {
+      "id": "e00f",
+      "cityName": "Markaz al Waḩat ad Dakhilah",
+      "country": "Egypt",
+      "emoji": "eg",
+      "date": "2024-02-15T11:58:46.034Z",
+      "notes": "",
+      "position": {
+        "lat": 25.3317823484675,
+        "lng": 29.091796875
+      }
+    },
+    {
+      "id": "2f9b",
+      "cityName": "Al Jawf",
+      "country": "Libya",
+      "emoji": "ly",
+      "date": "2024-02-15T11:58:49.336Z",
+      "notes": "",
+      "position": {
+        "lat": 24.77506532707266,
+        "lng": 19.599609375000004
+      }
+    },
+    {
+      "id": "9560",
+      "cityName": "Zaouiet Kounta",
+      "country": "Algeria",
+      "emoji": "dz",
+      "date": "2024-02-15T11:58:52.310Z",
+      "notes": "",
+      "position": {
+        "lat": 27.18298499359987,
+        "lng": -1.5380859375000002
+      }
+    },
+    {
+      "id": "c565",
+      "cityName": "Agdz",
+      "country": "Morocco",
+      "emoji": "ma",
+      "date": "2024-02-15T11:58:54.815Z",
+      "notes": "",
+      "position": {
+        "lat": 30.794650316265535,
+        "lng": -5.361328125
+      }
+    },
+    {
+      "id": "df2b",
+      "cityName": "Tsienyane/rakops",
+      "country": "Botswana",
+      "emoji": "bw",
+      "date": "2024-02-15T11:58:59.671Z",
+      "notes": "",
+      "position": {
+        "lat": -20.84972885082024,
+        "lng": 24.257812500000004
+      }
+    },
+    {
+      "id": "dae9",
+      "cityName": "Cuito Cuanavale",
+      "country": "Angola",
+      "emoji": "ao",
+      "date": "2024-02-15T11:59:04.400Z",
+      "notes": "",
+      "position": {
+        "lat": -15.69360611080213,
+        "lng": 18.984375000000004
+      }
+    },
+    {
+      "id": "5824",
+      "cityName": "Tura",
+      "country": "Russian Federation (the)",
+      "emoji": "ru",
+      "date": "2024-02-15T12:02:34.205Z",
+      "notes": "",
+      "position": {
+        "lat": 61.61226922485923,
+        "lng": 98.61328125
+      }
+    }
+  ]
+}
