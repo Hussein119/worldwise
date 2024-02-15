@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
+import '/node_modules/flag-icons/css/flag-icons.min.css'
 
 import styles from './Form.module.css'
 import Button from './Button'
@@ -91,7 +92,7 @@ function Form() {
           onChange={(e) => setCityName(e.target.value)}
           value={cityName}
         />
-        <span className={styles.flag}>{emoji}</span>
+        <span className={`fi fi-${emoji} ${styles.flag}`}></span>
       </div>
 
       <div className={styles.row}>
